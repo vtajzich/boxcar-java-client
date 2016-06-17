@@ -1,0 +1,21 @@
+group 'net.tajzich.boxcar'
+version '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile group: 'com.netflix.feign', name: 'feign-core', version: feignVersion
+
+    testCompile group: 'org.codehaus.groovy', name: 'groovy-all', version: groovyVersion
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+    testCompile group: 'com.github.tomakehurst', name: 'wiremock', version: '2.0.10-beta'
+}
